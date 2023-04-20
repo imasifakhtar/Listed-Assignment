@@ -1,0 +1,18 @@
+.activities {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  height: 20rem;
+}
+
+.activities h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.activities span {
+  color: #858585;
+  font-weight: 400;
+  font-size: 12px;
+}
