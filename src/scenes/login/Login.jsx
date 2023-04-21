@@ -2,22 +2,73 @@ import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Box } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 const Login = () => {
   return (
-    <div className="container">
+    <Box
+      sx={{
+        display: "flex",
+        position: "relative",
+        width: "100%",
+        height: "100vh",
+      }}
+    >
       {/* BOARD LOGO */}
-      <div className="txt">
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          width: "35%",
+          height: "100%",
+          backgroundColor: "black",
+          fontFamily: "'Montserrat', sans-serif",
+          color: "white",
+          fontSize: "38px",
+          fontWeight: "700",
+        }}
+      >
         <h3>Board.</h3>
-      </div>
+      </Box>
       {/* BOARD LOGO END*/}
 
       {/* LOGIN FORM  */}
-      <div className="content-login">
-        <div className="form-content">
-          <h2>Sign In</h2>
-          <span className="heading">Sign in to your account</span>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          width: "65%",
+          height: "100%",
+          backgroundColor: "#f5f5f5",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            width: "35%",
+          }}
+        >
+          <Box
+            sx={{
+              lineHeight: "1.6rem",
+            }}
+          >
+            <Typography
+              fontFamily="'Montserrat', sans-serif"
+              fontWeight={700}
+              fontSize={24}
+            >
+              Sign In
+            </Typography>
+            <Typography fontFamily="'Lato', sans-serif" fontSize={14}>
+              Sign in to your account
+            </Typography>
+          </Box>
 
           {/* LOGIN WITH */}
           <div className="quick">
@@ -40,9 +91,16 @@ const Login = () => {
               <label>Password</label>
               <input type="password" name="" />
             </div>
-            <div className="forgot gap">
-              <p>Forgot password?</p>
-            </div>
+            {/* <div className="forgot gap"> */}
+            <Typography
+              fontFamily="'Lato', sans-serif"
+              color="#346bd4"
+              fontSize={16}
+              paddingTop={1}
+            >
+              Forgot password?
+            </Typography>
+            {/* </div> */}
             <div className="inputBx gap">
               <Button
                 style={{
@@ -54,7 +112,10 @@ const Login = () => {
                   borderRadius: "10px",
                 }}
               >
-                <Link to="/dashboard" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/dashboard"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
                   <span>Sign In</span>
                 </Link>
               </Button>
@@ -63,14 +124,20 @@ const Login = () => {
           {/* FORM SECTION END */}
 
           <div className="account">
-            <p>
+            <Typography
+              fontFamily="'Lato', sans-serif"
+              fontSize={16}
+              textAlign="center"
+              color="#858585"
+              marginTop={1}
+            >
               Don’t have an account? <span>Register here</span>
-            </p>
+            </Typography>
           </div>
-        </div>
-      </div>
+        </Box>
+      </Box>
       {/* LOGIN FORM END */}
-    </div>
+    </Box>
   );
 };
 
