@@ -6,7 +6,6 @@ import { Button } from "@mui/material";
 
 const Login = () => {
   return (
-    // <div className="main">
     <div className="container">
       {/* BOARD LOGO */}
       <div className="txt">
@@ -45,15 +44,17 @@ const Login = () => {
               <p>Forgot password?</p>
             </div>
             <div className="inputBx gap">
-              {/* <input
-                type="submit"
-                value="Sign In"
-                name=""
-                id="signin"
-                onClick={() => (window.location.href = "/dashboard")}
-              /> */}
-              <Button>
-                <Link to="/dashboard">
+              <Button
+                style={{
+                  backgroundColor: "#000",
+                  width: "100%",
+                  fontFamily: "Montserrat, sans-serif",
+                  textTransform: "none",
+                  fontWeight: "700",
+                  borderRadius: "10px",
+                }}
+              >
+                <Link to="/dashboard" style={{ textDecoration: "none" }}>
                   <span>Sign In</span>
                 </Link>
               </Button>
@@ -70,7 +71,6 @@ const Login = () => {
       </div>
       {/* LOGIN FORM END */}
     </div>
-    // </div>
   );
 };
 
